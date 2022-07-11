@@ -148,7 +148,7 @@ input:focus, select:focus {
 .timer{
 	position: absolute;
 	right: 60px;
-	top: 40%;
+	top: 46%;
 }
 .success_window{
 	display: none;
@@ -177,7 +177,6 @@ input:focus, select:focus {
 	color: rgb(125, 125, 125);
 	font-size: 12px;
 }
-
 #next_quest{
 	position: absolute;
 	bottom: 20px;
