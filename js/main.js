@@ -2,6 +2,7 @@
 
 const sendBtn = document.getElementById('send'),
   form = document.getElementById('test'),
+  camp = document.getElementById('camp'),
   quest = document.getElementById('quest'),
   response = document.getElementById('response'),
   timer = document.querySelector('.timer'),
@@ -22,7 +23,6 @@ successWindow.innerHTML = `<p>Добрый день!<br>
 const nextQuestBtn = document.getElementById('next_quest')
 nextQuestBtn.addEventListener('click', () => {
   successWindow.classList.remove('active')
-  startTimer()
 })
 
 sendBtn.addEventListener('click', () => {
@@ -63,9 +63,6 @@ const questionTime = () => {
   })
 }
 
-form.addEventListener('submit', sendForm)
-
-
 // timer 
 
 const startTimer = () => {
@@ -82,7 +79,7 @@ const startTimer = () => {
       clearInterval(time)
     }
   }, 1000)
-
-
-
 }
+
+camp.addEventListener('change', startTimer)
+form.addEventListener('submit', sendForm)
