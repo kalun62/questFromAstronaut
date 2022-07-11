@@ -11,10 +11,6 @@ body{
 h1{
 	position: absolute;
 	top: 10px;
-	/* background: linear-gradient(45deg, #0d1241 13%, #2b5e99 50%, #140b41);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-		font-family: 'Poppins', sans-serif; */
 }
 input, select{
 	outline: none;
@@ -48,7 +44,6 @@ input::placeholder{
 	justify-content: center;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	
 }
 
 .form-group:first-child label{
@@ -109,7 +104,7 @@ input:focus, select:focus {
 	place-content: "Enter your message!";
 }
 
-#send{
+#send, #next_quest{
 	display: block;
 	width: 200px;
 	margin: 0 auto;
@@ -117,6 +112,8 @@ input:focus, select:focus {
 	margin-bottom: 20px;
 	padding: 10px 10px;
 	font-size: 18px;
+	text-transform: uppercase;
+	cursor: pointer;
 	border-radius: 5px;
 	width: 9em;
 	height: 3em;
@@ -130,7 +127,7 @@ input:focus, select:focus {
 	box-shadow: 6px 6px 12px #ffffff,
 				-6px -6px 12px #c5c5c5;
 }
-#send::before{
+#send::before, #next_quest::before{
 	content: '';
 	width: 0;
 	height: 3em;
@@ -143,15 +140,50 @@ input:focus, select:focus {
 	display: block;
 	z-index: -1;
 }
-#send:hover{
+#send:hover, #next_quest:hover{
 	color: #fff;
 	transition: .5s;
 }
-#send:hover::before {
+#send:hover::before, #next_quest:hover::before {
 	width: 9em;
 }
 .timer{
 	position: absolute;
 	right: 60px;
 	top: 40%;
+}
+.success_window{
+	display: none;
+	position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+	border-radius: 50px;
+	background: #d7d8da;
+    box-shadow: -20px 20px 60px #b7b8b9, 20px -20px 60px #f7f8fb;
+	z-index: 5;
+	justify-content: center;
+	align-items: center;
+}
+.success_window.active{
+	display: flex;
+}
+.success_window p{
+	line-height: 2.5rem;
+	margin-top: -40px;
+}
+.success_window span{
+	position: absolute;
+	bottom: 10px;
+	color: rgb(125, 125, 125);
+	font-size: 12px;
+}
+
+#next_quest{
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
