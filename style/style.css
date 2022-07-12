@@ -25,6 +25,15 @@ body{
 	width: 20%;
 	transform: scale(-1, 1);
 }
+#cosmos{
+	position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+	width: 100%;
+}
 h1{
 	position: absolute;
 	top: 10px;
@@ -53,10 +62,6 @@ input::placeholder{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url('/img/cosmos.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 .form-group:first-child{
 	display: flex;
