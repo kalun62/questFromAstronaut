@@ -171,9 +171,7 @@ input:focus, select:focus {
 	width: 9em;
 }
 .timer{
-	position: absolute;
-	right: 20px;
-	top: 46%;
+	margin-left: 20px;
 }
 .success_window{
 	display: none;
