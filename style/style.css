@@ -94,8 +94,8 @@ input::placeholder{
 	padding: 10px;
 	border-radius: 50px;
 	background: #d7d8da;
-	box-shadow:  -20px 20px 60px #b7b8b9,
-             20px -20px 60px #f7f8fb;
+	box-shadow:  -10px 10px 50px #b7b8b9,
+             10px -10px 50px #f7f8fb;
 	
 }
 #camp{
