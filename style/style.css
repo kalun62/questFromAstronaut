@@ -170,6 +170,18 @@ input:focus, select:focus {
 #send:hover::before, #next_quest:hover::before {
 	width: 9em;
 }
+#send.disabled{
+	opacity: .4;
+}
+#send.disabled:hover{
+
+}
+#send.disabled::before{
+	opacity: 0;
+}
+#send.disabled:hover::before{
+	opacity: 0;
+}
 .timer{
 	margin-left: 20px;
 }

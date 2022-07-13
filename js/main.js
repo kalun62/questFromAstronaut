@@ -11,6 +11,8 @@ const sendBtn = document.getElementById('send'),
 let i = 1;
 let time
 
+
+
 successWindow.classList.add('success_window', 'active')
 form.append(successWindow)
 successWindow.innerHTML = `<p>Добрый день!<br>
@@ -26,12 +28,18 @@ nextQuestBtn.addEventListener('click', () => {
 })
 
 sendBtn.addEventListener('click', () => {
-  i++;
-  quest.textContent = `Вопрос № ${i}`
-  questionTime()
-  timer.textContent = ''
-  clearInterval(time)
+    i++;
+    quest.textContent = `Вопрос № ${i}`
+    questionTime()
+    timer.textContent = ''
+    clearInterval(time)  
 })
+const disabledBtn = () => {
+  sendBtn.setAttribute('disabled', 'disabled')
+  sendBtn.classList.add('disabled')
+}
+
+disabledBtn()
 
 const sendForm = (e) => {
   e.preventDefault()
@@ -46,6 +54,7 @@ const sendForm = (e) => {
   })
   response.value = ''
   response.setAttribute('name', `Вопрос_${i}`)
+  disabledBtn()
 }
 
 const questionTime = () => {
@@ -81,5 +90,14 @@ const startTimer = () => {
   }, 1000)
 }
 
-camp.addEventListener('change', startTimer)
+camp.addEventListener('change', () => {
+  startTimer()
+})
+
+response.addEventListener('input', () => {
+  sendBtn.removeAttribute('disabled')
+  sendBtn.classList.remove('disabled')
+  response.value === '' || camp.value === 'default'? disabledBtn() : ''
+})
+
 form.addEventListener('submit', sendForm)
