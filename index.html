@@ -2,30 +2,30 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Вопросы от космонавта</title>
-	<link rel="stylesheet" href="style/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="img/earth_PNG39.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопросы от космонавта</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/earth_PNG39.png">
 </head>
 
 <body>
-	<img id="cosmos" src="img/cosmos.jpg" alt="cosmos">
-	<div class="form-wrap">
-		<h1>Вопросы от космонавта</h1>
-		<img id="earth" src="img/earth_PNG39.png" alt="earth">
-		<img id="mks" src="img/mks.png" alt="mks">
-		<form id="test">
-			<div class="form-group">
-				<label for="Лагерь">Детский лагерь</label>
-				<select type="text" name="Лагерь" id="camp" placeholder="название д/л">
+    <img id="cosmos" src="img/cosmos.jpg" alt="cosmos">
+    <div class="form-wrap">
+        <h1>Вопросы от космонавта</h1>
+        <img id="earth" src="img/earth_PNG39.png" alt="earth">
+        <img id="mks" src="img/mks.png" alt="mks">
+        <form id="test" method="post" action="#">
+            <div class="form-group">
+                <label for="Лагерь">Детский лагерь</label>
+                <select type="text" name="Лагерь" id="camp" placeholder="название д/л">
 					<option value="default">Выберите Ваш д/л</option>
 					<option value="Солнечный">Солнечный</option>
 					<option value="Стремительный">Стремительный</option>
@@ -38,20 +38,20 @@
 					<option value="Юнармеец">Юнармеец</option>
 					<option value="Солнышко">Солнышко</option>
 				</select>
-			</div>
-			<div class="form-group">
-				<label id="quest" for="Вопрос">Вопрос № 1</label>
-				<input type="text" name="Вопрос_1" id="response" placeholder="Введите ответ">
-				<div class="timer"></div>
-			</div>
-			<button id="send" type="submit">отправить</button>
-			
-		</form>
-	</div>
+            </div>
+            <div class="form-group">
+                <label id="quest" for="Вопрос">Вопрос № 1</label>
+                <input type="text" name="Вопрос_1" id="response" placeholder="Введите ответ">
+                <div class="timer"></div>
+            </div>
+            <button id="send" type="button">отправить</button>
 
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/axios.min.js"></script>
-	<script src="js/main.js"></script>
+        </form>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
