@@ -39,7 +39,7 @@ function checkFormStatus() {
         })
 }
 
-setInterval(checkFormStatus, 2000)
+// setInterval(checkFormStatus, 2000)
 
 function startTimer() {
     let sec = 30
